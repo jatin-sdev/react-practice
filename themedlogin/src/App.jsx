@@ -26,7 +26,7 @@ function App() {
       className="w-full h-screen duration-500 flex justify-center items-center "
       style={{ backgroundColor: bgColor, color: textColor }}
     >
-      <div className="fixed flex-wrap justify-center items-center border-0 p-4 w-max ">
+      <div className="fixed flex-wrap justify-center items-center border-0 p-4 ">
         <div
           className="border-0 p-6 rounded-lg  duration-500"
           style={{
