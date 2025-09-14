@@ -1,18 +1,24 @@
-import { useState, createContext } from "react";
-import ChildA from "./components/ChildA.jsx";
+import { useState } from "react";
+// import ChildA from "./components/ChildA.jsx";
+// import { useState, createContext } from "react";
 // import Hello from "./components/hello.jsx";
 // import Test from "./components/test.jsx";
-// import Card from "./props/Cards.jsx";
+import Card from "./props/Cards.jsx";
 
-const ChildBContext = createContext();
-const ChangeThemeContext = createContext();
+// const ChildBContext = createContext();
+// const ChangeThemeContext = createContext();
 
 function App() {
-  const childBData = { name: "Child B from App" };
-  const [theme, setTheme] = useState("dark");
+  // const childBData = { name: "Child B from App" };
+  // const [theme, setTheme] = useState("dark");
+  const [name, setName] = useState("");
   return (
     <>
-      <div>
+      <div className="w-full h-screen flex justify-center items-center ">
+        <Card name={name} setName={setName} />
+      </div>
+
+      {/* <div>
         <ChildBContext.Provider value={childBData}>
           <ChangeThemeContext.Provider value={{ theme, setTheme }}>
             <div>
@@ -20,7 +26,7 @@ function App() {
             </div>
           </ChangeThemeContext.Provider>
         </ChildBContext.Provider>
-      </div>
+      </div> */}
       {/* <div className="bg-zinc-900 text-gray-100 text-3xl flex justify-center items-center w-screen h-screen ">
         <div className="text-center border-1 border-gray-600 p-10 rounded-2xl shadow-lg shadow-black/30 ">
           <Test />
@@ -33,5 +39,5 @@ function App() {
 }
 
 export default App;
-export { ChildBContext };
-export { ChangeThemeContext };
+// export { ChildBContext };
+// export { ChangeThemeContext };
