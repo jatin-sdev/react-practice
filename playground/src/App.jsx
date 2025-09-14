@@ -3,7 +3,9 @@ import { useState } from "react";
 // import { useState, createContext } from "react";
 // import Hello from "./components/hello.jsx";
 // import Test from "./components/test.jsx";
-import Card from "./props/Cards.jsx";
+// import Card from "./props/Cards.jsx";
+import Alert from "./components/Alert";
+("./components/Alert.jsx");
 
 // const ChildBContext = createContext();
 // const ChangeThemeContext = createContext();
@@ -11,13 +13,27 @@ import Card from "./props/Cards.jsx";
 function App() {
   // const childBData = { name: "Child B from App" };
   // const [theme, setTheme] = useState("dark");
-  const [name, setName] = useState("");
+  // const [name, setName] = useState("");
+  const [count, setCount] = useState(0);
+  function incrementCount() {
+    setCount(count + 1);
+  }
+
   return (
     <>
-      <div className="w-full h-screen flex justify-center items-center ">
-        <Card name={name} setName={setName} />
+      <div className="w-full h-screen flex justify-center items-center  ">
+        <div
+          className="space-x-5 space-y-5 border-2 p-10 rounded-lg shadow-lg shadow-black/30 "
+          onClick={incrementCount}
+        >
+          <Alert />
+          <button>Count+</button>
+          <h2 className="text-4xl">{count}</h2>
+        </div>
       </div>
-
+      {/* <div >
+        <Card name={name} setName={setName} />
+      </div> */}
       {/* <div>
         <ChildBContext.Provider value={childBData}>
           <ChangeThemeContext.Provider value={{ theme, setTheme }}>
