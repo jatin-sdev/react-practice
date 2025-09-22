@@ -1,7 +1,12 @@
 // import { useState } from "react";
 import Navbar from "./components/Navbar";
+import Dashboard from "./components/Dashboard";
+import Home from "./components/Home";
+import About from "./components/About";
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ParamComp from "./components/ParamComp";
+import { React } from "react";
 
 const router = createBrowserRouter([
   {
@@ -9,7 +14,7 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Navbar />
-        <div>Home</div>
+        <Home />
       </div>
     ),
   },
@@ -18,7 +23,7 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Navbar />
-        <div>About</div>
+        <About />
       </div>
     ),
   },
@@ -27,7 +32,16 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Navbar />
-        <div>Dashboard</div>
+        <Dashboard />
+      </div>
+    ),
+  },
+  {
+    path: "/student/:id",
+    element: (
+      <div>
+        <Navbar />
+        <ParamComp />
       </div>
     ),
   },
