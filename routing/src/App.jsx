@@ -7,6 +7,9 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ParamComp from "./components/ParamComp";
 import { React } from "react";
+import Streak from "./components/Streak";
+import LiveClass from "./components/LiveClass";
+import NotFound from "./components/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +38,10 @@ const router = createBrowserRouter([
         <Dashboard />
       </div>
     ),
+    children: [
+      { path: "streak", element: <Streak /> },
+      { path: "live-class", element: <LiveClass /> },
+    ],
   },
   {
     path: "/student/:id",
@@ -45,6 +52,7 @@ const router = createBrowserRouter([
       </div>
     ),
   },
+  { path: "*", element: <NotFound /> },
 ]);
 
 function App() {

@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="{(isActive) => (isActive ? 'navbar-item' : 'inactive')}">
         <NavLink to="/dashboard">Dashboard</NavLink>
       </div>
-      <div><NavBtn /></div>
+      <NavBtn />
       
     </div>
   );
