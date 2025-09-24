@@ -7,4 +7,4 @@ const LiveClass = () => {
   )
 }
 
-export default LiveClass
+export default LiveClass 
