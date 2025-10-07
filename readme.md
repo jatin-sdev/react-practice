@@ -1,4 +1,4 @@
-# to practice and experiment with react
+# to practice and experiment with react + vite
 
 npm create vite@latest my-project
 cd my-project
